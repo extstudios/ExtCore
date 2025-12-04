@@ -61,7 +61,7 @@ Add to your `build.gradle`:
 ```gradle
 plugins {
     id 'java'
-    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'com.gradleup.shadow' version '9.2.2'
 }
 
 dependencyResolutionManagement {
@@ -74,7 +74,7 @@ dependencyResolutionManagement {
 }
 
 dependencies {
-    compileOnly 'io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT'
+    compileOnly 'io.papermc.paper:paper-api:1.21.10-R0.1-SNAPSHOT'
    
     implementation 'com.github.extstudios:ExtCore:v1.0.0'
     
