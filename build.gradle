@@ -101,7 +101,7 @@ publishing {
             pom {
                 name = 'ExtCore'
                 description = 'Comprehensive Minecraft plugin library with Folia/Paper support'
-                url = 'https://github.com/eextr0/ExtCore'
+                url = 'https://github.com/extstudios/ExtCore'
 
                 licenses {
                     license {
@@ -118,9 +118,9 @@ publishing {
                 }
 
                 scm {
-                    connection = 'scm:git:git://github.com/eextr0/ExtCore.git'
-                    developerConnection = 'scm:git:ssh://github.com/eextr0/ExtCore.git'
-                    url = 'https://github.com/eextr0/ExtCore'
+                    connection = 'scm:git:git://github.com/extstudios/ExtCore.git'
+                    developerConnection = 'scm:git:ssh://github.com/extstudios/ExtCore.git'
+                    url = 'https://github.com/extstudios/ExtCore'
                 }
             }
         }
