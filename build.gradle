@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'org.extstudios'
-version = '1.0.0'
+version = '1.0.1'
 
 repositories {
     mavenCentral()
@@ -90,7 +90,6 @@ publishing {
             groupId = 'org.extstudios'
             artifactId = 'extcore'
 
-            // Only publish shadowJar (not the regular JAR)
             artifact(shadowJar) {
                 classifier = null
             }
@@ -128,5 +127,12 @@ publishing {
 
     repositories {
         mavenLocal()
+    }
+
+    tasks.named('publishMavenJavaPublicationToMavenLocal') {
+        dependsOn(tasks.named('jar'))
+        dependsOn(tasks.named('shadowJar'))
+        dependsOn(tasks.named('sourcesJar'))
+        dependsOn(tasks.named('javadocJar'))
     }
 }
