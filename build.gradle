@@ -92,11 +92,16 @@ tasks.withType(JavaCompile).configureEach {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            from components.java
+            groupId = 'org.extstudios'
+            artifactId = 'extcore'
 
+            // Only publish shadowJar (not the regular JAR)
             artifact(shadowJar) {
                 classifier = null
             }
+
+            artifact(sourcesJar)
+            artifact(javadocJar)
 
             pom {
                 name = 'ExtCore'
