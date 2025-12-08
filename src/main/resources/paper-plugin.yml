@@ -1,5 +1,5 @@
 name: ExtCore
 version: ${version}
-main: org.extstudios.extCore.ExtCore
+main: org.extstudios.extcore.ExtCore
 api-version: '1.21'
 authors: [ eextr0 ]

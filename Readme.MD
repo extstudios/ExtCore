@@ -109,8 +109,8 @@ tasks.build.dependsOn(shadowJar)
 package com.example.myplugin;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.extstudios.extCore.API.Core.CoreAPI;
-import org.extstudios.extCore.API.Core.CoreProvider;
+import org.extstudios.extcore.api.core.CoreAPI;
+import org.extstudios.extcore.api.core.CoreProvider;
 
 public class MyPlugin extends JavaPlugin {
     
@@ -143,7 +143,7 @@ public class MyPlugin extends JavaPlugin {
 Advanced logging with automatic object formatting.
 
 ```java
-import org.extstudios.extCore.API.LoggingService;
+import org.extstudios.extcore.api.LoggingService;
 
 LoggingService logger = api.getLoggingService();
 
@@ -183,7 +183,7 @@ logger.seperator(); // Prints: ========================================
 Adventure API with MiniMessage for rich text formatting.
 
 ```java
-import org.extstudios.extCore.API.MessageService;
+import org.extstudios.extcore.api.MessageService;
 
 MessageService messages = api.getMessageService();
 
@@ -229,7 +229,7 @@ Component component = messages.parse("<green>Formatted text</green>");
 YAML configuration management with hot-reload support.
 
 ```java
-import org.extstudios.extCore.API.ConfigService;
+import org.extstudios.extcore.api.ConfigService;
 
 ConfigService config = api.getConfigService();
 
@@ -300,8 +300,8 @@ database:
 Platform-optimized task scheduling (Folia and Paper).
 
 ```java
-import org.extstudios.extCore.API.Task.TaskService;
-import org.extstudios.extCore.API.Task.Task;
+import org.extstudios.extcore.api.task.TaskService;
+import org.extstudios.extcore.api.task.Task;
 
 TaskService tasks = api.getTaskService();
 
@@ -361,8 +361,8 @@ if (Platform.isFolia()) {
 Fluent command builder with Brigadier on Paper.
 
 ```java
-import org.extstudios.extCore.API.Command.CommandService;
-import org.extstudios.extCore.API.Command.CommandFactory;
+import org.extstudios.extcore.api.command.CommandService;
+import org.extstudios.extcore.api.command.CommandFactory;
 
 CommandService cmdService = api.getCommandService();
 
@@ -485,7 +485,7 @@ ctx.replyError(msg)       // Send error message
 Thread-safe per-player data storage with automatic cleanup.
 
 ```java
-import org.extstudios.extCore.API.PlayerDataService;
+import org.extstudios.extcore.api.PlayerDataService;
 
 PlayerDataService playerData = api.getPlayerDataService();
 
@@ -548,7 +548,7 @@ public class EconomyManager {
 Advanced permission management with wildcard and temporary support.
 
 ```java
-import org.extstudios.extCore.API.PermissionService;
+import org.extstudios.extcore.api.PermissionService;
 
 PermissionService perms = api.getPermissionService();
 
@@ -619,7 +619,7 @@ int maxHomes = perms.getHighestLevel(player, "homes.limit", 50);
 bStats integration for plugin statistics.
 
 ```java
-import org.extstudios.extCore.API.MetricsService;
+import org.extstudios.extcore.api.MetricsService;
 
 MetricsService metrics = api.getMetricsService();
 
@@ -654,8 +654,8 @@ metrics.addCustomChart(this, new SingleLineChart("total_transactions", () -> {
 Folia-safe GUI builder with click handlers.
 
 ```java
-import org.extstudios.extCore.API.Inventory.InventoryService;
-import org.extstudios.extCore.API.Inventory.InventoryBuilder;
+import org.extstudios.extcore.api.inventory.InventoryService;
+import org.extstudios.extcore.api.inventory.InventoryBuilder;
 
 InventoryService invService = api.getInventoryService();
 
@@ -755,8 +755,8 @@ Comprehensive database support with HikariCP connection pooling.
 #### YAML Database
 
 ```java
-import org.extstudios.extCore.API.Database.DatabaseService;
-import org.extstudios.extCore.API.Database.Database;
+import org.extstudios.extcore.api.database.DatabaseService;
+import org.extstudios.extcore.api.database.Database;
 
 DatabaseService dbService = api.getDatabaseService();
 
@@ -811,7 +811,7 @@ jsonDb.connect().thenRun(() -> {
 #### MySQL Database
 
 ```java
-import org.extstudios.extCore.API.Database.SQLConfig;
+import org.extstudios.extcore.api.database.SQLConfig;
 
 // Configure MySQL connection
 SQLConfig mysqlConfig = SQLConfig.mysql(
